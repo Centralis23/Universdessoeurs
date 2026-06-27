@@ -13,7 +13,7 @@ a { text-decoration: none; color: inherit; }
   --dark: #1a1410;
   --white: #ffffff;
   --font: 'Cormorant Garamond', serif;
-  --font-title: 'Cormorant', serif;
+  --font-title: 'Courgette', cursive;
 }
 
 body {
@@ -62,8 +62,6 @@ body {
 .deco-line:last-child { background: linear-gradient(to left, transparent, rgba(196,168,130,0.6)); }
 .section-title-script {
   font-family: var(--font-title);
-  font-style: italic;
-  font-weight: 300;
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   letter-spacing: 0.04em;
   color: var(--taupe-dark);
@@ -217,8 +215,6 @@ body.intro-active { overflow: hidden; }
 }
 .hero-title {
   font-family: var(--font-title);
-  font-style: italic;
-  font-weight: 300;
   font-size: clamp(2rem, 3vw, 3rem);
   line-height: 1.2;
   color: var(--white);
@@ -306,8 +302,6 @@ body.intro-active { overflow: hidden; }
 .intro-section-label::before { content: ''; display: inline-block; width: 2.5rem; height: 1px; background: var(--taupe); }
 .intro-section-title {
   font-family: var(--font-title);
-  font-style: italic;
-  font-weight: 300;
   font-size: clamp(2rem, 3vw, 2.8rem);
   color: var(--taupe-dark);
   line-height: 1.2;
@@ -367,8 +361,6 @@ body.intro-active { overflow: hidden; }
 
 .prog-card-title {
   font-family: var(--font-title);
-  font-style: italic;
-  font-weight: 300;
   font-size: 1.1rem;
   color: var(--dark);
   margin-bottom: 0.6rem;
@@ -516,8 +508,6 @@ body.intro-active { overflow: hidden; }
 }
 .offre-title {
   font-family: var(--font-title);
-  font-style: italic;
-  font-weight: 300;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   color: var(--dark);
   margin-bottom: 1.2rem;
@@ -633,8 +623,6 @@ body.intro-active { overflow: hidden; }
   border: none;
   padding: 1.4rem 0;
   font-family: var(--font-title);
-  font-style: italic;
-  font-weight: 300;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--taupe-dark);
