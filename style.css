@@ -1190,6 +1190,7 @@ a { text-decoration: none; color: inherit; }
 
 .intro-img {
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .intro-img img {
