@@ -573,7 +573,7 @@ body.intro-active { overflow: hidden; }
   font-family: var(--font-title);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  font-size: clamp(1.4rem, 2.8vw, 2.6rem);
   color: var(--dark);
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -585,24 +585,25 @@ body.intro-active { overflow: hidden; }
   font-weight: 300;
   margin-bottom: 1.8rem;
 }
-.offre-text-list {
-  list-style: none;
+.offre-badges {
   display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
-.offre-text-list li {
-  font-size: 0.85rem;
-  color: #5a4a38;
-  font-weight: 400;
-  padding-left: 1.2rem;
-  position: relative;
+.offre-item-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--taupe-dark);
+  background: rgba(160,128,96,0.1);
+  border: 1px solid rgba(160,128,96,0.3);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
 }
-.offre-text-list li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--taupe-light);
+.programme-cta {
+  text-align: center;
+  margin-top: 3rem;
 }
 @media (max-width: 900px) {
   .offre-inner { grid-template-columns: 1fr; gap: 3rem; }
