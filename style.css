@@ -569,7 +569,12 @@ body.intro-active { overflow: hidden; }
   color: #bbb;
   letter-spacing: 0.08em;
 }
-.offre-text { }
+.offre-text {
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(160,128,96,0.08);
+  border-radius: 4px;
+  padding: 3rem 3.5rem;
+}
 .offre-text-label {
   font-size: 0.62rem;
   font-weight: 600;
