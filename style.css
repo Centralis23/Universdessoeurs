@@ -726,6 +726,7 @@ body.intro-active { overflow: hidden; }
 
 /* ===== TÉMOIGNAGES ===== */
 .temoignages { padding: 6rem 0; background: var(--white); }
+.temoignages .section-title-script { font-size: clamp(2rem, 3.2vw, 3rem); }
 .temoignages .container { overflow: visible; }
 .temoignages .section-deco { padding: 0 2rem; margin-bottom: 3rem; }
 .temoignages-track-wrapper { overflow: hidden; width: 100%; }
