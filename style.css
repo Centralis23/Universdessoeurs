@@ -824,7 +824,7 @@ body.intro-active { overflow: hidden; }
   padding: 7rem 2rem;
   background-image: linear-gradient(rgba(10,6,2,0.91), rgba(10,6,2,0.91)), url('./foulard univers.png');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-attachment: scroll;
 }
 .faq .section-title-script { color: var(--white); white-space: nowrap; font-size: clamp(1.2rem, 4vw, 2.2rem); }
