@@ -100,6 +100,11 @@ document.querySelectorAll('.imagine-card, .programme-item, .temoignage-card, .ta
   observer.observe(el);
 });
 
+const offreCard = document.querySelector('.offre-card');
+const offreText = document.querySelector('.offre-text');
+if (offreCard) { offreCard.classList.add('fade-in', 'fade-in--left'); observer.observe(offreCard); }
+if (offreText) { offreText.classList.add('fade-in', 'fade-in--right'); observer.observe(offreText); }
+
 // Loader
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
