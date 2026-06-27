@@ -177,9 +177,9 @@ window.addEventListener('load', () => {
 })();
 
 // ===== TÉMOIGNAGES INFINITE SCROLL =====
-(function () {
+window.addEventListener('DOMContentLoaded', function () {
   const track = document.querySelector('.temoignages-track');
   if (!track) return;
   const clone = track.innerHTML;
   track.innerHTML = clone + clone;
-})();
+});
