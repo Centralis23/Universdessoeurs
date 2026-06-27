@@ -1,18 +1,49 @@
 // ===== INTRO ANIMATION =====
 (function () {
   document.body.classList.add('intro-active');
-  const intro = document.getElementById('intro');
 
-  // After bar fills (≈2.1s total), slide the overlay away
+  const intro   = document.getElementById('intro');
+  const fill    = document.getElementById('progressFill');
+  const percent = document.getElementById('progressPercent');
+
+  if (!intro || !fill || !percent) return;
+
+  let current = 0;
+  // Start counting after elements appear (~1s delay from CSS)
+  const startDelay = 1100;
+  const duration   = 1800; // ms to go 0→100
+  const interval   = 30;   // tick every 30ms
+  const steps      = duration / interval;
+  const increment  = 100 / steps;
+
+  function easeOut(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  let startTime = null;
+
   setTimeout(() => {
-    intro.classList.add('hide');
-    document.body.classList.remove('intro-active');
+    startTime = performance.now();
 
-    // After slide-out transition ends, remove from DOM
-    setTimeout(() => {
-      intro.classList.add('done');
-    }, 950);
-  }, 2200);
+    const tick = setInterval(() => {
+      const elapsed = performance.now() - startTime;
+      const t = Math.min(elapsed / duration, 1);
+      current = Math.round(easeOut(t) * 100);
+
+      fill.style.width    = current + '%';
+      percent.textContent = current + '%';
+
+      if (current >= 100) {
+        clearInterval(tick);
+        // Pause at 100% then slide out
+        setTimeout(() => {
+          intro.classList.add('slide-out');
+          document.body.classList.remove('intro-active');
+          setTimeout(() => intro.classList.add('done'), 1050);
+        }, 400);
+      }
+    }, interval);
+  }, startDelay);
 })();
 
 // Nav scroll
