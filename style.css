@@ -108,9 +108,9 @@ body.intro-active { overflow: hidden; }
 
 .intro-ref {
   font-family: var(--font);
-  font-size: 0.85rem;
+  font-size: clamp(0.55rem, 2.5vw, 0.75rem);
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--dark);
   margin-bottom: 2rem;
