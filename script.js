@@ -65,10 +65,9 @@ if (!mobileMenu) {
   mobileMenu = document.createElement('div');
   mobileMenu.className = 'nav-mobile';
   mobileMenu.innerHTML = `
-    <a href="#formations" class="mobile-link">Formations</a>
-    <a href="#programme" class="mobile-link">Programme</a>
-    <a href="#tarifs" class="mobile-link">Tarifs</a>
-    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#programme" class="mobile-link">La Formation</a>
+    <a href="#avantages" class="mobile-link">Pourquoi nous ?</a>
+    <a href="#tarifs" class="mobile-link">S'inscrire</a>
   `;
   document.body.appendChild(mobileMenu);
 }
