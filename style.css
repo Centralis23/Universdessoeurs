@@ -251,7 +251,7 @@ a { text-decoration: none; color: inherit; }
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 20vh;
+  height: 480px;
   margin-top: 80px;
   background: var(--dark);
 }
@@ -948,4 +948,212 @@ a { text-decoration: none; color: inherit; }
   font-size: 2rem;
   color: var(--taupe-dark);
   font-weight: 300;
+}
+
+/* ===== HERO EXTRAS ===== */
+.hero-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--taupe-light);
+  margin-bottom: 1rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--taupe-light);
+  border: 1px solid var(--taupe-light);
+  padding: 0.3em 0.9em;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== PROGRAMME LIST ===== */
+.programme-list {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.programme-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba(160, 128, 96, 0.15);
+}
+
+.check {
+  color: var(--taupe);
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.programme-list-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5a4a38;
+}
+
+/* ===== AVANTAGES ===== */
+.avantages-section {
+  padding: 7rem 2rem;
+  background: var(--beige);
+}
+
+.avantages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.avantages-box {
+  padding: 3rem 2.5rem;
+}
+
+.avantages-box--dark {
+  background: var(--dark);
+  color: #fff;
+}
+
+.avantages-box--gold {
+  background: var(--taupe);
+  color: #fff;
+}
+
+.box-title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  color: #fff;
+}
+
+.box-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.box-list li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.88);
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 768px) {
+  .avantages-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== POURQUOI ===== */
+.pourquoi {
+  padding: 7rem 2rem;
+  background: var(--cream);
+}
+
+.pourquoi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pourquoi-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 1px solid rgba(160, 128, 96, 0.2);
+  transition: box-shadow 0.3s;
+}
+
+.pourquoi-item:hover { box-shadow: 0 4px 20px rgba(160, 128, 96, 0.15); }
+
+.pourquoi-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pourquoi-item p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #5a4a38;
+}
+
+@media (max-width: 900px) {
+  .pourquoi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .pourquoi-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== TARIF UNIQUE ===== */
+.tarif-unique {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3.5rem;
+  border: 1px solid rgba(160, 128, 96, 0.3);
+  align-items: center;
+}
+
+.tarif-unique-left {
+  text-align: center;
+  min-width: 200px;
+}
+
+.tarif-lancement-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-bottom: 0.8rem;
+}
+
+.tarif-lancement-price {
+  margin: 0.5rem 0 0.8rem;
+}
+
+.price-new-big {
+  font-family: var(--serif);
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: var(--taupe-dark);
+}
+
+.tarif-lancement-sub {
+  font-size: 0.8rem;
+  color: #7a6a58;
+}
+
+.tarif-unique-right .tarif-title {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--taupe-dark);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .tarif-unique {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+  .tarif-unique-left { min-width: auto; }
 }
