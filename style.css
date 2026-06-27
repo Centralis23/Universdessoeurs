@@ -417,7 +417,7 @@ body.intro-active { overflow: hidden; }
 
 @media (max-width: 600px) {
   .carousel-arrow { display: flex; }
-  .programme { padding: 4rem 1.5rem; }
+  .programme { padding: 4rem 1.5rem; background-size: 200%; }
   .programme .container { padding: 0; }
   .section-deco { justify-content: center; padding: 0 1rem; }
   .programme-cards {
