@@ -273,30 +273,58 @@ body.intro-active { overflow: hidden; }
 }
 
 /* ===== PROGRAMME ===== */
-.programme { padding: 6rem 2rem; background: var(--beige); }
+.programme { padding: 7rem 2rem; background: var(--dark); }
+.programme .section-title-script { color: var(--white); }
+.programme .deco-line { background: linear-gradient(to right, transparent, rgba(196,168,130,0.4)); }
+.programme .deco-line:last-child { background: linear-gradient(to left, transparent, rgba(196,168,130,0.4)); }
 
-.programme-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  justify-content: center;
-  max-width: 860px;
+.programme-modules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
   margin: 0 auto;
+  border-left: 1px solid rgba(196,168,130,0.2);
+  border-top: 1px solid rgba(196,168,130,0.2);
 }
-.prog-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1.3rem;
-  border: 1px solid rgba(160,128,96,0.3);
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--taupe-dark);
-  background: var(--white);
-  border-radius: 4px;
-  transition: background 0.25s, color 0.25s;
+
+.prog-module {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.8rem;
+  padding: 2.5rem 2rem;
+  border-right: 1px solid rgba(196,168,130,0.2);
+  border-bottom: 1px solid rgba(196,168,130,0.2);
+  transition: background 0.3s;
 }
-.prog-badge:hover { background: var(--taupe); color: var(--white); border-color: var(--taupe); }
+.prog-module:hover { background: rgba(196,168,130,0.05); }
+
+.prog-num {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--taupe-light);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.prog-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.prog-desc {
+  font-size: 0.78rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+}
+
+@media (max-width: 768px) {
+  .programme-modules { grid-template-columns: 1fr; }
+}
 
 /* ===== AVANTAGES ===== */
 .avantages-section { padding: 6rem 2rem; background: var(--white); }
