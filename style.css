@@ -780,28 +780,37 @@ body.intro-active { overflow: hidden; }
 /* ===== TARIFS ===== */
 .tarifs { padding: 6rem 2rem; background: var(--beige); }
 .tarif-unique {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 3rem;
-  max-width: 860px;
+  display: flex;
+  flex-direction: row;
+  max-width: 820px;
   margin: 0 auto;
-  padding: 3.5rem;
   border: 1px solid rgba(160,128,96,0.25);
-  border-radius: 10px;
-  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
   background: var(--white);
 }
-.tarif-unique-left { text-align: center; }
-.tarif-lancement-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.8rem; }
-.price-new-big { font-size: 3rem; font-weight: 700; color: var(--taupe-dark); }
-.tarif-lancement-sub { font-size: 0.78rem; color: #7a6a58; margin-top: 0.5rem; font-weight: 300; }
-.tarif-unique-right .tarif-title { font-size: 1.2rem; font-weight: 600; color: var(--dark); margin-bottom: 1.5rem; }
-.tarif-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
-.tarif-features li { font-size: 0.86rem; color: #5a4a38; padding-bottom: 0.6rem; border-bottom: 1px solid rgba(160,128,96,0.12); }
+.tarif-unique-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2.5rem;
+  background: var(--dark);
+  min-width: 200px;
+}
+.tarif-lancement-label { font-size: 0.55rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe-light); margin-bottom: 1rem; }
+.price-new-big { font-size: 3rem; font-weight: 700; color: var(--white); }
+.tarif-lancement-sub { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 0.6rem; font-weight: 300; }
+.tarif-unique-right { padding: 3rem; flex: 1; }
+.tarif-unique-right .tarif-title { font-size: 1.1rem; font-weight: 600; color: var(--dark); margin-bottom: 1.4rem; }
+.tarif-features { list-style: none; display: flex; flex-direction: column; gap: 0; margin-bottom: 2rem; }
+.tarif-features li { font-size: 0.84rem; color: #5a4a38; padding: 0.55rem 0; border-bottom: 1px solid rgba(160,128,96,0.12); }
 
 @media (max-width: 768px) {
-  .tarif-unique { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.5rem; }
-  .tarif-unique-left { min-width: auto; }
+  .tarif-unique { flex-direction: column; }
+  .tarif-unique-left { padding: 2rem; min-width: auto; }
+  .tarif-unique-right { padding: 2rem 1.5rem; }
 }
 
 /* ===== FAQ ===== */
