@@ -185,3 +185,16 @@ window.addEventListener('DOMContentLoaded', function () {
   const clone = track.innerHTML;
   track.innerHTML = clone + clone;
 });
+
+// ===== FORMSPREE AJAX =====
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const data = new FormData(contactForm);
+    await fetch('https://formspree.io/f/mkolbnby', { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+    contactForm.style.display = 'none';
+    formSuccess.style.display = 'block';
+  });
+}

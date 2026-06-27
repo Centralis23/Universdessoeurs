@@ -889,6 +889,7 @@ body.intro-active { overflow: hidden; }
 .contact-form input:focus { border-color: var(--white); }
 .contact-form .btn-primary { background: var(--white); color: var(--taupe-dark); border-color: var(--white); margin-top: 0.5rem; }
 .contact-form .btn-primary:hover { background: #f0ece8; }
+.form-success { display: none; color: var(--white); font-size: 0.95rem; font-style: italic; letter-spacing: 0.05em; margin-top: 1rem; opacity: 0.9; }
 
 /* ===== FOOTER ===== */
 .footer { background: var(--dark); color: rgba(255,255,255,0.55); text-align: center; padding: 4rem 2rem; }
