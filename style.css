@@ -827,7 +827,7 @@ body.intro-active { overflow: hidden; }
 /* ===== FAQ ===== */
 .faq {
   padding: 7rem 2rem;
-  background-image: linear-gradient(rgba(10,6,2,0.91), rgba(10,6,2,0.91)), url('./foulard univers.png');
+  background-image: linear-gradient(rgba(10,6,2,0.78), rgba(10,6,2,0.78)), url('./foulard univers.png');
   background-size: cover;
   background-position: center top;
   background-attachment: scroll;
