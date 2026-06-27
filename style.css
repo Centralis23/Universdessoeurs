@@ -55,7 +55,7 @@ body.intro-active { overflow: hidden; }
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #c4a882;
+  color: #1a1410;
   margin-top: 0.3rem;
   opacity: 0;
   animation: introFadeUp 0.6s ease 1.3s forwards;
