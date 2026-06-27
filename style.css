@@ -247,22 +247,44 @@ body.intro-active { overflow: hidden; }
 }
 
 .intro-section-images {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  display: flex;
+  flex-direction: row;
   gap: 0.8rem;
   height: 560px;
 }
-.intro-img { overflow: hidden; border-radius: 10px; }
-.intro-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform 0.5s ease; }
-.intro-img:hover img { transform: scale(1.03); }
-.intro-img--tall { height: 100%; }
-.intro-img-col { display: flex; flex-direction: column; gap: 0.8rem; height: 100%; }
-.intro-img-col .intro-img { flex: 1; }
+.intro-img--tall {
+  flex: 1.1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.intro-img--tall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.intro-img-col {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.intro-img-col .intro-img {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.intro-img-col .intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 
 @media (max-width: 900px) {
-  .intro-section-images {
-    height: 360px;
-  }
+  .intro-section-images { height: 360px; }
 }
 
 
