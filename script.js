@@ -107,3 +107,31 @@ window.addEventListener('load', () => {
     setTimeout(() => loader.classList.add('hide'), 600);
   }
 });
+
+// Mobile carousel dots
+(function () {
+  const track = document.querySelector('.programme-cards');
+  const dotsContainer = document.getElementById('carouselDots');
+  if (!track || !dotsContainer) return;
+
+  const cards = track.querySelectorAll('.prog-card');
+  const total = cards.length;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => {
+      cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    });
+    dotsContainer.appendChild(dot);
+  }
+
+  track.addEventListener('scroll', () => {
+    const scrollLeft = track.scrollLeft;
+    const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(track).gap);
+    const active = Math.round(scrollLeft / cardWidth);
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === active);
+    });
+  }, { passive: true });
+})();
