@@ -48,6 +48,7 @@ body {
 .btn-taupe:hover { background: var(--taupe); color: var(--white); }
 .btn-nav { background: var(--taupe); color: var(--white); border: 2px solid var(--taupe); padding: 0.55rem 1.4rem; font-size: 0.68rem; border-radius: 50px; }
 .btn-nav:hover { background: var(--taupe-dark); }
+.btn-hero-short { display: none; }
 .btn-hero { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.45); padding: 0.85rem 2.2rem; font-family: var(--font); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; display: inline-block; }
 .btn-hero:hover { background: var(--white); color: var(--dark); }
 .btn-hero-outline { background: var(--white); color: var(--dark); border: 2px solid var(--white); padding: 0.85rem 2.2rem; font-family: var(--font); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; display: inline-block; border-radius: 50px; }
@@ -258,8 +259,10 @@ body.intro-active { overflow: hidden; }
 @media (max-width: 768px) {
   .hero { grid-template-columns: 1fr; height: auto; min-height: auto; }
   .hero-image { height: 65vw; min-height: 260px; }
-  .hero-content { padding: 2.5rem 1.5rem; height: auto; }
+  .hero-content { padding: 2.5rem 1.5rem; height: auto; background: rgba(26,20,16,0.65); }
   .hero-sub { max-width: 100%; }
+  .btn-hero-full { display: none; }
+  .btn-hero-short { display: inline; }
 }
 
 /* ===== INTRO SECTION ===== */
