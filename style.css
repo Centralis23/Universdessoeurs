@@ -720,14 +720,35 @@ body.intro-active { overflow: hidden; }
 @media (max-width: 480px) { .pourquoi-grid { grid-template-columns: 1fr; } }
 
 /* ===== TÉMOIGNAGES ===== */
-.temoignages { padding: 6rem 2rem; background: var(--white); }
-.temoignages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; }
-.temoignage-card { background: var(--beige); padding: 2.5rem 2rem; border-radius: 8px; }
-.stars { color: var(--taupe); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 3px; }
-.temoignage-card p { font-size: 0.88rem; line-height: 1.8; color: #5a4a38; font-style: italic; margin-bottom: 1.2rem; }
-.temoignage-name { font-size: 0.78rem; font-weight: 600; color: var(--taupe); }
-
-@media (max-width: 768px) { .temoignages-grid { grid-template-columns: 1fr; } }
+.temoignages { padding: 6rem 0; background: var(--white); overflow: hidden; }
+.temoignages .container { overflow: visible; }
+.temoignages .section-deco { padding: 0 2rem; margin-bottom: 3rem; }
+.temoignages-track-wrapper { overflow: hidden; }
+.temoignages-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: temoignages-scroll 28s linear infinite;
+  width: max-content;
+  padding: 1rem 0;
+}
+.temoignages-track:hover { animation-play-state: paused; }
+@keyframes temoignages-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.temoignage-card {
+  background: var(--beige);
+  border: 1px solid rgba(160,128,96,0.12);
+  padding: 2.2rem 2rem;
+  border-radius: 16px;
+  width: 320px;
+  flex-shrink: 0;
+  transition: box-shadow 0.3s;
+}
+.temoignage-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+.stars { color: var(--taupe); font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 3px; }
+.temoignage-card p { font-size: 0.86rem; line-height: 1.85; color: #5a4a38; font-style: italic; margin-bottom: 1.4rem; }
+.temoignage-name { font-size: 0.75rem; font-weight: 600; color: var(--taupe); letter-spacing: 0.05em; }
 
 /* ===== TARIFS ===== */
 .tarifs { padding: 6rem 2rem; background: var(--beige); }

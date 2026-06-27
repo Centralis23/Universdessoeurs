@@ -157,3 +157,11 @@ window.addEventListener('load', () => {
   prev.addEventListener('click', () => scrollBy(-1));
   next.addEventListener('click', () => scrollBy(1));
 })();
+
+// ===== TÉMOIGNAGES INFINITE SCROLL =====
+(function () {
+  const track = document.querySelector('.temoignages-track');
+  if (!track) return;
+  const clone = track.innerHTML;
+  track.innerHTML = clone + clone;
+})();
