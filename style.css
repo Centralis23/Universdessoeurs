@@ -595,6 +595,7 @@ body.intro-active { overflow: hidden; }
   color: var(--taupe);
   margin-bottom: 1rem;
   display: block;
+  text-align: center;
 }
 .offre-text-title {
   font-family: var(--font-title);
@@ -611,6 +612,7 @@ body.intro-active { overflow: hidden; }
   line-height: 1.9;
   color: #6a5a48;
   font-weight: 300;
+  text-align: center;
   margin-bottom: 1.8rem;
 }
 .offre-kit-list {
