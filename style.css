@@ -739,7 +739,7 @@ body.intro-active { overflow: hidden; }
 
 /* ===== TÉMOIGNAGES ===== */
 .temoignages { padding: 6rem 0; background: var(--white); }
-.temoignages .section-title-script { font-size: clamp(1.5rem, 3.2vw, 3rem); max-width: 380px; margin: 0 auto; }
+.temoignages .section-title-script { font-size: clamp(1.3rem, 2vw, 2rem); white-space: nowrap; }
 .temoignages .container { padding: 0 2rem; }
 .temoignages .section-deco { margin-bottom: 3rem; }
 .temoignages-track-wrapper {
