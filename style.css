@@ -169,7 +169,10 @@ body.intro-active { overflow: hidden; }
 /* ===== NAV MOBILE ===== */
 .nav-mobile {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
   background: var(--white);
   z-index: 99;
   display: flex;
@@ -179,6 +182,7 @@ body.intro-active { overflow: hidden; }
   gap: 2.5rem;
   transform: translateX(100%);
   transition: transform 0.4s ease;
+  box-shadow: -4px 0 30px rgba(0,0,0,0.1);
 }
 .nav-mobile.open { transform: translateX(0); }
 .nav-mobile a { font-size: 1.6rem; font-weight: 300; color: var(--taupe-dark); }
