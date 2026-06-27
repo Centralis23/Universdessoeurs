@@ -327,8 +327,11 @@ body.intro-active { overflow: hidden; }
 /* ===== PROGRAMME ===== */
 .programme {
   padding: 7rem 2rem;
-  background: linear-gradient(rgba(26,20,16,0.82), rgba(26,20,16,0.82)),
-              url('apprentisage.jpeg') center/cover no-repeat;
+  background-color: var(--dark);
+  background-image: linear-gradient(rgba(26,20,16,0.82), rgba(26,20,16,0.82)), url('apprentisage.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .programme-cards {
