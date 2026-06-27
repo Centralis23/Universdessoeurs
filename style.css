@@ -251,31 +251,17 @@ a { text-decoration: none; color: inherit; }
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 620px;
+  height: 70vh;
+  min-height: 500px;
   margin-top: 80px;
   background: var(--dark);
-}
-
-@media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-  .hero-image {
-    height: 70vw;
-    min-height: 280px;
-  }
-  .hero-content {
-    padding: 2.5rem 1.5rem;
-    align-items: flex-start;
-    text-align: left;
-  }
 }
 
 /* Image gauche */
 .hero-image {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .hero-image img {
@@ -293,6 +279,25 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   padding: 5rem 4rem;
   background: var(--dark);
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+  .hero-image {
+    height: 70vw;
+    min-height: 280px;
+  }
+  .hero-content {
+    padding: 2.5rem 1.5rem;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
+  }
 }
 
 .hero-eyebrow {
