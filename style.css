@@ -63,6 +63,7 @@ body {
 .section-title-script {
   font-family: var(--font-title);
   font-style: italic;
+  font-weight: 400;
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   letter-spacing: 0.04em;
   color: var(--taupe-dark);
@@ -217,6 +218,7 @@ body.intro-active { overflow: hidden; }
 .hero-title {
   font-family: var(--font-title);
   font-style: italic;
+  font-weight: 400;
   font-size: clamp(2rem, 3vw, 3rem);
   line-height: 1.2;
   color: var(--white);
@@ -305,6 +307,7 @@ body.intro-active { overflow: hidden; }
 .intro-section-title {
   font-family: var(--font-title);
   font-style: italic;
+  font-weight: 400;
   font-size: clamp(2rem, 3vw, 2.8rem);
   color: var(--taupe-dark);
   line-height: 1.2;
@@ -367,6 +370,7 @@ body.intro-active { overflow: hidden; }
 .prog-card-title {
   font-family: var(--font-title);
   font-style: italic;
+  font-weight: 400;
   font-size: 1.1rem;
   color: var(--dark);
   margin-bottom: 0.6rem;
@@ -517,6 +521,7 @@ body.intro-active { overflow: hidden; }
 .offre-title {
   font-family: var(--font-title);
   font-style: italic;
+  font-weight: 400;
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   color: var(--dark);
   margin-bottom: 1.2rem;
@@ -567,6 +572,7 @@ body.intro-active { overflow: hidden; }
 .offre-text-title {
   font-family: var(--font-title);
   font-style: italic;
+  font-weight: 400;
   font-size: clamp(1.8rem, 2.8vw, 2.6rem);
   color: var(--dark);
   line-height: 1.2;
@@ -674,6 +680,7 @@ body.intro-active { overflow: hidden; }
   padding: 1.4rem 0;
   font-family: var(--font-title);
   font-style: italic;
+  font-weight: 400;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--taupe-dark);
