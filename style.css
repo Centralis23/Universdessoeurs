@@ -328,18 +328,6 @@ a { text-decoration: none; color: inherit; }
   border-color: #ffffff;
 }
 
-/* Hero mobile */
-@media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    margin-top: 70px;
-    min-height: auto;
-  }
-  .hero-image { height: 70vw; min-height: 300px; }
-  .hero-content { padding: 3rem 2rem; align-items: center; text-align: center; }
-  .hero-sub { max-width: 100%; }
-  .btn-hero { align-self: center; }
-}
 
 .hero-scroll {
   position: absolute;
