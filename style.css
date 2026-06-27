@@ -447,21 +447,45 @@ body.intro-active { overflow: hidden; }
 }
 
 /* ===== OFFRE DÉBUTANTES ===== */
-.offre-section { padding: 6rem 2rem; background: var(--beige); }
-.offre-card {
-  max-width: 500px;
+/* ===== OFFRE DÉBUTANTES ===== */
+.offre-section {
+  padding: 6rem 4rem;
+  background: var(--beige);
+}
+.offre-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1100px;
   margin: 0 auto;
+}
+.offre-card {
   background: var(--white);
   border-radius: 16px;
   overflow: hidden;
-  text-align: center;
   box-shadow: 0 8px 48px rgba(0,0,0,0.08);
   position: relative;
   border-top: 4px solid var(--taupe);
 }
+.offre-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--taupe-dark);
+  color: var(--white);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  z-index: 1;
+}
 .offre-img {
   width: 100%;
-  height: 260px;
+  height: 240px;
   overflow: hidden;
 }
 .offre-img img {
@@ -471,86 +495,104 @@ body.intro-active { overflow: hidden; }
   object-position: center;
   display: block;
 }
-.offre-card .offre-label,
-.offre-card .offre-title,
-.offre-card .offre-desc,
-.offre-card .offre-price,
-.offre-card .offre-btn,
-.offre-card .offre-note {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-.offre-card > *:not(.offre-img):not(.offre-badge):first-of-type { margin-top: 2.5rem; }
-.offre-label { display: block; margin-top: 2rem; }
-.offre-note { padding-bottom: 2.5rem; }
-.offre-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--taupe-dark);
-  color: var(--white);
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 0.35rem 1.2rem;
-  border-radius: 20px;
-  white-space: nowrap;
+.offre-card-body {
+  padding: 2rem 2rem 2.5rem;
+  text-align: center;
 }
 .offre-label {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--taupe);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 .offre-title {
   font-family: var(--font-title);
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   color: var(--dark);
   margin-bottom: 1.2rem;
   line-height: 1.2;
-}
-.offre-desc {
-  font-size: 0.88rem;
-  line-height: 1.85;
-  color: #6a5a48;
-  font-weight: 300;
-  margin-bottom: 2rem;
 }
 .offre-price {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 0.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .offre-amount {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 300;
   color: var(--dark);
   line-height: 1;
 }
 .offre-cents {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: var(--taupe);
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
 }
 .offre-btn {
   width: 100%;
   display: block;
-  padding: 1rem;
-  font-size: 0.72rem;
+  padding: 0.9rem;
+  font-size: 0.7rem;
   letter-spacing: 0.18em;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 .offre-note {
-  font-size: 0.68rem;
-  color: #aaa;
+  font-size: 0.65rem;
+  color: #bbb;
   letter-spacing: 0.08em;
+}
+.offre-text { }
+.offre-text-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-bottom: 1rem;
+  display: block;
+}
+.offre-text-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.offre-text-body {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: #6a5a48;
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+}
+.offre-text-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.offre-text-list li {
+  font-size: 0.85rem;
+  color: #5a4a38;
+  font-weight: 400;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.offre-text-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--taupe-light);
+}
+@media (max-width: 900px) {
+  .offre-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .offre-section { padding: 4rem 1.5rem; }
 }
 
 /* ===== AVANTAGES ===== */
