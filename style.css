@@ -330,7 +330,7 @@ body.intro-active { overflow: hidden; }
   position: relative;
   background-color: var(--dark);
   background-image: linear-gradient(rgba(26,20,16,0.82), rgba(26,20,16,0.82)), url('./apprentisage.jpeg');
-  background-size: cover;
+  background-size: 150%;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: scroll;
