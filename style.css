@@ -732,7 +732,7 @@ body.intro-active { overflow: hidden; }
   gap: 1.5rem;
   animation: temoignages-scroll 28s linear infinite;
   width: max-content;
-  padding: 1rem 0;
+  padding: 1rem 1.5rem;
 }
 .temoignages-track:hover { animation-play-state: paused; }
 @keyframes temoignages-scroll {
@@ -747,6 +747,10 @@ body.intro-active { overflow: hidden; }
   width: 320px;
   flex-shrink: 0;
   transition: box-shadow 0.3s;
+}
+@media (max-width: 768px) {
+  .temoignage-card { width: 260px; padding: 1.6rem 1.4rem; }
+  .temoignages-track { gap: 1rem; }
 }
 .temoignage-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
 .stars { color: var(--taupe); font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 3px; }
