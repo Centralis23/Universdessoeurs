@@ -740,7 +740,8 @@ body.intro-active { overflow: hidden; }
 /* ===== TÉMOIGNAGES ===== */
 .temoignages { padding: 6rem 0; background: var(--white); }
 .temoignages .section-title-script { font-size: clamp(1.3rem, 2vw, 2rem); white-space: nowrap; }
-.temoignages-sub { font-size: 0.88rem; color: #8a7060; font-style: italic; margin-top: 0.6rem; text-align: center; }
+.temoignages-head { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+.temoignages-sub { font-size: 1rem; color: #8a7060; font-style: italic; text-align: center; }
 .temoignages .container { padding: 0 2rem; }
 .temoignages .section-deco { margin-bottom: 3rem; }
 .temoignages-track-wrapper {
