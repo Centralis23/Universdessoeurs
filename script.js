@@ -178,13 +178,6 @@ window.addEventListener('load', () => {
   next.addEventListener('click', () => scrollBy(1));
 })();
 
-// ===== TÉMOIGNAGES INFINITE SCROLL =====
-window.addEventListener('DOMContentLoaded', function () {
-  const track = document.querySelector('.temoignages-track');
-  if (!track) return;
-  const clone = track.innerHTML;
-  track.innerHTML = clone + clone;
-});
 
 // ===== FORMSPREE AJAX =====
 const contactForm = document.getElementById('contactForm');
