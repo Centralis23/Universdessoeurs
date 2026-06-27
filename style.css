@@ -612,18 +612,18 @@ body.intro-active { overflow: hidden; }
   margin-top: 3.5rem;
 }
 .programme-cta .btn {
-  background: var(--white);
-  color: var(--taupe-dark);
-  border: 2px solid var(--white);
+  background: var(--taupe-light);
+  color: var(--white);
+  border: 2px solid var(--taupe-light);
   padding: 1.1rem 3.5rem;
   font-size: 0.75rem;
   letter-spacing: 0.22em;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
   transition: all 0.3s;
 }
 .programme-cta .btn:hover {
-  background: transparent;
-  color: var(--white);
+  background: var(--taupe);
+  border-color: var(--taupe);
 }
 @media (max-width: 900px) {
   .offre-inner { grid-template-columns: 1fr; gap: 3rem; }
