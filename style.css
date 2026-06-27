@@ -726,16 +726,22 @@ body.intro-active { overflow: hidden; }
 
 /* ===== TÉMOIGNAGES ===== */
 .temoignages { padding: 6rem 0; background: var(--white); }
-.temoignages .section-title-script { font-size: clamp(2rem, 3.2vw, 3rem); }
-.temoignages .container { overflow: visible; }
-.temoignages .section-deco { padding: 0 2rem; margin-bottom: 3rem; }
-.temoignages-track-wrapper { overflow: hidden; width: 100%; }
+.temoignages .section-title-script { font-size: clamp(1.5rem, 3.2vw, 3rem); max-width: 380px; margin: 0 auto; }
+.temoignages .container { padding: 0 2rem; }
+.temoignages .section-deco { margin-bottom: 3rem; }
+.temoignages-track-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .temoignages-track {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   animation: temoignages-scroll 32s linear infinite;
   width: max-content;
-  padding: 1rem 0;
+  padding: 1rem 1.2rem;
   will-change: transform;
 }
 .temoignages-track:hover { animation-play-state: paused; }
@@ -746,14 +752,14 @@ body.intro-active { overflow: hidden; }
 .temoignage-card {
   background: var(--beige);
   border: 1px solid rgba(160,128,96,0.12);
-  padding: 2.2rem 2rem;
+  padding: 2rem 1.8rem;
   border-radius: 16px;
-  width: 300px;
+  width: 280px;
   flex-shrink: 0;
   transition: box-shadow 0.3s;
 }
 @media (max-width: 768px) {
-  .temoignage-card { width: 240px; padding: 1.4rem 1.2rem; }
+  .temoignage-card { width: 220px; padding: 1.3rem 1.1rem; }
   .temoignages-track { gap: 0.8rem; }
 }
 .temoignage-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
