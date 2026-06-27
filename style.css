@@ -239,7 +239,7 @@ body.intro-active { overflow: hidden; }
 .hero-title {
   font-family: var(--font-title);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   font-size: clamp(2.2rem, 3.5vw, 3.8rem);
   line-height: 1.1;
   white-space: nowrap;
