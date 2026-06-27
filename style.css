@@ -723,7 +723,7 @@ body.intro-active { overflow: hidden; }
   .avantages-inner { grid-template-columns: 1fr; gap: 3.5rem; }
 }
 @media (max-width: 480px) {
-  .avantages-cards { gap: 0.6rem; }
+  .avantages-cards { gap: 0.6rem; margin-top: 1rem; }
   .av-card { padding: 0.9rem 1rem; }
 }
 
