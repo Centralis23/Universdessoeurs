@@ -818,9 +818,10 @@ body.intro-active { overflow: hidden; }
 /* ===== FAQ ===== */
 .faq {
   padding: 7rem 2rem;
-  background-image: linear-gradient(rgba(20,12,6,0.82), rgba(20,12,6,0.82)), url('./foulard univers.png');
+  background-image: linear-gradient(rgba(10,6,2,0.91), rgba(10,6,2,0.91)), url('./foulard univers.png');
   background-size: cover;
   background-position: center;
+  background-attachment: scroll;
 }
 .faq .section-title-script { color: var(--white); white-space: nowrap; font-size: clamp(1.2rem, 4vw, 2.2rem); }
 .faq .deco-line { background: var(--taupe-light); opacity: 0.3; }
@@ -864,7 +865,7 @@ body.intro-active { overflow: hidden; }
   transition: transform 0.3s, background-color 0.3s;
 }
 .faq-item.open .faq-question::after { transform: rotate(45deg); background-color: rgba(196,168,130,0.15); }
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; will-change: max-height; }
 .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1.8rem; }
 .faq-answer p { font-size: 0.86rem; line-height: 1.9; color: rgba(255,255,255,0.5); font-weight: 300; padding: 0 1.8rem; }
 
