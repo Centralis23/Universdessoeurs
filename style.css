@@ -744,10 +744,7 @@ body.intro-active { overflow: hidden; }
 .temoignages .section-deco { margin-bottom: 3rem; }
 .temoignages-track-wrapper {
   overflow: hidden;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
 }
 .temoignages-track {
   display: flex;
