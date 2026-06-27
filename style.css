@@ -3,7 +3,7 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #faf6f0;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,9 +44,21 @@ body.intro-active { overflow: hidden; }
 .intro-tagline {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #a08060;
   letter-spacing: 0.1em;
+}
+
+.intro-ref {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c4a882;
+  margin-top: 0.3rem;
+  opacity: 0;
+  animation: introFadeUp 0.6s ease 1.3s forwards;
 }
 
 /* Progress bar zone */
