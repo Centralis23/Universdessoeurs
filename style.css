@@ -981,35 +981,34 @@ a { text-decoration: none; color: inherit; }
 }
 
 
-/* ===== PROGRAMME LIST ===== */
-.programme-list {
-  max-width: 750px;
-  margin: 0 auto;
+/* ===== PROGRAMME BADGES ===== */
+.programme-badges {
   display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-}
-
-.programme-list-item {
-  display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 1rem;
-  padding-bottom: 1.1rem;
-  border-bottom: 1px solid rgba(160, 128, 96, 0.15);
+  justify-content: center;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
-.check {
-  color: var(--taupe);
-  font-size: 1.1rem;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
+.prog-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border: 1px solid rgba(160, 128, 96, 0.35);
+  font-family: 'Playfair Display', serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--taupe-dark);
+  background: var(--white);
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
 }
 
-.programme-list-item p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #5a4a38;
+.prog-badge:hover {
+  background: var(--taupe);
+  border-color: var(--taupe);
+  color: #fff;
 }
 
 /* ===== AVANTAGES ===== */
