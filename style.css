@@ -13,7 +13,7 @@ a { text-decoration: none; color: inherit; }
   --dark: #1a1410;
   --white: #ffffff;
   --font: 'Cormorant Garamond', serif;
-  --font-title: 'Playfair Display', serif;
+  --font-title: 'Cormorant Garamond', serif;
 }
 
 body {
