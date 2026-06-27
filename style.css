@@ -765,8 +765,8 @@ body.intro-active { overflow: hidden; }
 .tarifs { padding: 6rem 2rem; background: var(--beige); }
 .tarif-unique {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
   max-width: 860px;
   margin: 0 auto;
   padding: 3.5rem;
@@ -775,7 +775,7 @@ body.intro-active { overflow: hidden; }
   align-items: center;
   background: var(--white);
 }
-.tarif-unique-left { text-align: center; min-width: 180px; }
+.tarif-unique-left { text-align: center; }
 .tarif-lancement-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.8rem; }
 .price-new-big { font-size: 3rem; font-weight: 700; color: var(--taupe-dark); }
 .tarif-lancement-sub { font-size: 0.78rem; color: #7a6a58; margin-top: 0.5rem; font-weight: 300; }
