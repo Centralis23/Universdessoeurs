@@ -698,7 +698,7 @@ body.intro-active { overflow: hidden; }
 
 .aqui-col { }
 .aqui-col--img { display: flex; align-items: center; justify-content: center; }
-.aqui-img { width: 100%; max-height: 480px; object-fit: contain; border-radius: 16px; display: block; }
+.aqui-img { width: 100%; max-height: 620px; object-fit: cover; border-radius: 24px; display: block; }
 .aqui-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: 2.5rem; }
 .aqui-list li {
   display: flex;
