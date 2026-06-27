@@ -618,6 +618,18 @@ body.intro-active { overflow: hidden; }
   display: flex;
   flex-direction: column;
 }
+.offre-kit-list li::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border: 1px solid rgba(160,128,96,0.4);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a08060' stroke-width='2'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  background-size: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .offre-kit-list li {
   display: flex;
   align-items: center;
