@@ -50,9 +50,9 @@ body {
 .btn-nav:hover { background: var(--taupe-dark); }
 .btn-hero { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.45); padding: 0.85rem 2.2rem; font-family: var(--font); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; display: inline-block; }
 .btn-hero:hover { background: var(--white); color: var(--dark); }
-.btn-hero-outline { background: var(--taupe); color: var(--white); border: 2px solid var(--taupe); padding: 0.85rem 2.2rem; font-family: var(--font); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; display: inline-block; border-radius: 50px; }
-.btn-hero-outline:hover { background: var(--taupe-dark); border-color: var(--taupe-dark); }
-.hero-btns { display: flex; gap: 1.2rem; align-items: center; margin-top: 2rem; flex-wrap: wrap; }
+.btn-hero-outline { background: var(--white); color: var(--dark); border: 2px solid var(--white); padding: 0.85rem 2.2rem; font-family: var(--font); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; transition: all 0.3s; cursor: pointer; display: inline-block; border-radius: 50px; }
+.btn-hero-outline:hover { background: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.85); }
+.hero-btns { display: flex; gap: 1.2rem; align-items: center; margin-top: 2rem; flex-wrap: nowrap; }
 
 /* ===== SECTION TITLES ===== */
 .section-deco {
