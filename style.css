@@ -251,7 +251,7 @@ a { text-decoration: none; color: inherit; }
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 480px;
+  height: 620px;
   margin-top: 80px;
   background: var(--dark);
 }
