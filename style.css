@@ -814,7 +814,12 @@ body.intro-active { overflow: hidden; }
 }
 
 /* ===== FAQ ===== */
-.faq { padding: 7rem 2rem; background: var(--dark); }
+.faq {
+  padding: 7rem 2rem;
+  background-image: linear-gradient(rgba(20,12,6,0.82), rgba(20,12,6,0.82)), url('./foulard univers.png');
+  background-size: cover;
+  background-position: center;
+}
 .faq .section-title-script { color: var(--white); white-space: nowrap; }
 .faq .deco-line { background: var(--taupe-light); opacity: 0.3; }
 .faq-list { max-width: 800px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
