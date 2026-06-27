@@ -135,3 +135,20 @@ window.addEventListener('load', () => {
     });
   }, { passive: true });
 })();
+
+// Carousel prev/next arrows
+(function () {
+  const track = document.querySelector('.programme-cards');
+  const prev = document.getElementById('carouselPrev');
+  const next = document.getElementById('carouselNext');
+  if (!track || !prev || !next) return;
+
+  function scrollBy(dir) {
+    const card = track.querySelector('.prog-card');
+    const gap = parseInt(getComputedStyle(track).gap) || 16;
+    track.scrollBy({ left: dir * (card.offsetWidth + gap), behavior: 'smooth' });
+  }
+
+  prev.addEventListener('click', () => scrollBy(-1));
+  next.addEventListener('click', () => scrollBy(1));
+})();
