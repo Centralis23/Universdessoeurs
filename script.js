@@ -105,6 +105,20 @@ const offreText = document.querySelector('.offre-text');
 if (offreCard) { offreCard.classList.add('fade-in', 'fade-in--left'); observer.observe(offreCard); }
 if (offreText) { offreText.classList.add('fade-in', 'fade-in--right'); observer.observe(offreText); }
 
+// Avantages section animations
+document.querySelectorAll('.av-card').forEach((el, i) => {
+  el.classList.add('fade-in');
+  el.style.transitionDelay = (i * 80) + 'ms';
+  observer.observe(el);
+});
+document.querySelectorAll('.aqui-list li').forEach((el, i) => {
+  el.classList.add('fade-in', 'fade-in--right');
+  el.style.transitionDelay = (i * 100) + 'ms';
+  observer.observe(el);
+});
+const avantagesTitles = document.querySelectorAll('.avantages-col .section-deco, .aqui-col .section-deco');
+avantagesTitles.forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
+
 // Loader
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
