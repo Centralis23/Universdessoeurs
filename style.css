@@ -919,6 +919,27 @@ body.intro-active { overflow: hidden; }
 .footer-links a:hover { color: var(--taupe-light); }
 .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.25); }
 
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.55);
+}
+
 /* ===== RESPONSIVE NAV ===== */
 @media (max-width: 900px) {
   .nav { padding: 1rem 1.5rem; }
