@@ -524,6 +524,9 @@ body.intro-active { overflow: hidden; }
   white-space: nowrap;
   z-index: 1;
 }
+.offre-badge--rupture {
+  background: #b03a2e;
+}
 .offre-img {
   width: 100%;
 }
