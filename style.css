@@ -584,6 +584,14 @@ body.intro-active { overflow: hidden; }
   letter-spacing: 0.18em;
   margin-bottom: 1rem;
 }
+.offre-btn--disabled {
+  background: #b0b0b0;
+  border-color: #b0b0b0;
+  color: var(--white);
+  cursor: not-allowed;
+  pointer-events: none;
+  text-align: center;
+}
 .offre-note {
   font-size: 0.65rem;
   color: #bbb;
