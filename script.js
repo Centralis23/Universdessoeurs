@@ -11,19 +11,29 @@ window.addEventListener('load', function () { window.scrollTo(0, 0); });
   const intro   = document.getElementById('intro');
   const fill    = document.getElementById('progressFill');
   const percent = document.getElementById('progressPercent');
+  const skipBtn = document.getElementById('introSkip');
 
   if (!intro || !fill || !percent) return;
 
-  let current = 0;
+  let current  = 0;
+  let finished = false;
+  let tick     = null;
   // Start counting after elements appear (~1s delay from CSS)
   const startDelay = 1100;
   const duration   = 1800; // ms to go 0→100
   const interval   = 30;   // tick every 30ms
-  const steps      = duration / interval;
-  const increment  = 100 / steps;
 
   function easeOut(t) {
     return 1 - Math.pow(1 - t, 3);
+  }
+
+  function closeIntro() {
+    if (finished) return;
+    finished = true;
+    clearInterval(tick);
+    intro.classList.add('slide-out');
+    document.body.classList.remove('intro-active');
+    setTimeout(() => intro.classList.add('done'), 1050);
   }
 
   let startTime = null;
@@ -31,7 +41,7 @@ window.addEventListener('load', function () { window.scrollTo(0, 0); });
   setTimeout(() => {
     startTime = performance.now();
 
-    const tick = setInterval(() => {
+    tick = setInterval(() => {
       const elapsed = performance.now() - startTime;
       const t = Math.min(elapsed / duration, 1);
       current = Math.round(easeOut(t) * 100);
@@ -42,14 +52,14 @@ window.addEventListener('load', function () { window.scrollTo(0, 0); });
       if (current >= 100) {
         clearInterval(tick);
         // Pause at 100% then slide out
-        setTimeout(() => {
-          intro.classList.add('slide-out');
-          document.body.classList.remove('intro-active');
-          setTimeout(() => intro.classList.add('done'), 1050);
-        }, 400);
+        setTimeout(closeIntro, 400);
       }
     }, interval);
   }, startDelay);
+
+  if (skipBtn) {
+    skipBtn.addEventListener('click', closeIntro);
+  }
 })();
 
 // Nav scroll
