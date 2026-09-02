@@ -4,6 +4,14 @@ window.scrollTo(0, 0);
 document.addEventListener('DOMContentLoaded', function () { window.scrollTo(0, 0); });
 window.addEventListener('load', function () { window.scrollTo(0, 0); });
 
+// A URL hash (e.g. #tarifs from a previous in-page nav click) makes the
+// browser jump straight to that section while the intro overlay is still
+// showing, so the hero never appears once the overlay closes. Pin the
+// page to the top for as long as the intro is active.
+window.addEventListener('scroll', function () {
+  if (document.body.classList.contains('intro-active')) window.scrollTo(0, 0);
+});
+
 // ===== INTRO ANIMATION =====
 (function () {
   document.body.classList.add('intro-active');
@@ -33,6 +41,7 @@ window.addEventListener('load', function () { window.scrollTo(0, 0); });
     clearInterval(tick);
     intro.classList.add('slide-out');
     document.body.classList.remove('intro-active');
+    window.scrollTo(0, 0);
     setTimeout(() => intro.classList.add('done'), 1050);
   }
 
